@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+  <title>Lista de Compras</title>
+  <meta charset="utf-8">
 </head>
 <body>
-Olá
+  <div class="pagina">
+    <h1 class="titulo">Lista de Produtos</h1>
+    <ul class="lista">
+      {% for produto in produtos %}
+      <li class="produto"> O produto: {{produto[1]}} foi criado dia: {{produto[2]}} </li>
+      {% endfor %}
+    </ul>
+    <form action="/adicionar" method="POST" class="formulario">
+      <input placeholder="Produto..." class="texto" type="text" name="nome">
+      <input class="botao" type="submit" value="Adicionar à lista">
+    </form>
+  </div>
 </body>
 </html>
