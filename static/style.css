@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.pagina {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.titulo {
+  grid-column: 2 / 5;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 25px;
+}
+
+.lista{
+  grid-row: 2;
+  grid-column: 2 / 3 span;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  list-style: none;
+}
+
+.produto {
+  padding: 4px;
+  display: inline-block;
+}
+
+.formulario {
+  grid-column: 3;
+  grid-row: 3 / 5;
+  display: flex;
+  flex-flow: column;
+}
+
+.texto {
+  height: 2em;
+  padding: 5px;
+  margin: 18px 0px 6px 0px;
+  font-size: 16px;
+}
+
+.botao {
+  font-size: 16px;
+  padding: 6px;
+  border-radius: 6px;
+  color: white;
+  background-color: rgba(50,160,10,.8);
+}
